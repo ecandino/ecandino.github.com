@@ -103,29 +103,16 @@ header {
 
 header ul {
   list-style:none;
-  height:40px;
-  
-  padding:0;
-  
-  background: #eee;
-  background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-  background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  
-  border-radius:5px;
-  border:1px solid #d2d2d2;
-  box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
-  width:270px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 0;
+  width: 200px;
 }
 
 header li {
-  width:89px;
   float:left;
-  border-right:1px solid #d2d2d2;
-  height:40px;
+  width: 30px;
+  margin-right: 20px;
 }
 
 header ul a {
@@ -135,23 +122,41 @@ header ul a {
   display:block;
   text-align:center;
   padding-top:6px;
-  height:40px;
 }
+
+header ul a:hover{ color: #39c;}
+
+.header-h1{
+  text-align: center;
+}
+
+.header-icon{
+  font-size: 28px;
+}
+
+header .img-wrapper{
+  border-radius: 80px;
+  width: 160px;
+  height: 160px;
+  border: 1px solid #ddd;
+  margin: 20px auto;
+}
+
+header .img-wrapper .profile{
+  border-radius: 100px;
+  width: 150px;
+  height: 150px;
+  margin:  5px;
+  display: block;
+}
+
+
 
 strong {
   color:#222;
   font-weight:700;
 }
 
-header ul li + li {
-  width:88px;
-  border-left:1px solid #fff;
-}
-
-header ul li + li + li {
-  border-right:none;
-  width:89px;
-}
 
 header ul a strong {
   font-size:14px;
@@ -176,6 +181,22 @@ hr {
   margin:0 0 20px;
 }
 
+.tile-list{
+  list-style: none;
+  margin-bottom: 20px;
+  float: left;
+  width: 100%;
+}
+
+.tile-list li{
+  width: 80px;
+  height: 60px;
+  background: #eee;
+  margin-right: 20px;
+  float: left;
+  margin-bottom: 20px;
+}
+
 footer {
   width:270px;
   float:left;
@@ -184,7 +205,7 @@ footer {
 }
 
 @media print, screen and (max-width: 960px) {
-  
+
   div.wrapper {
     width:auto;
     margin:0;
@@ -199,6 +220,12 @@ footer {
   header {
     padding-right:320px;
   }
+
+  header .img-wrapper{
+    display: none;
+  }
+
+  .header-h1{ text-align: left;}
   
   section {
     border:1px solid #e5e5e5;
@@ -226,7 +253,9 @@ footer {
   header {
     padding:0;
   }
-  
+    
+  .header-h1{ text-align: center;}
+
   header ul, header p.view {
     position:static;
   }
@@ -239,10 +268,6 @@ footer {
 @media print, screen and (max-width: 480px) {
   body {
     padding:15px;
-  }
-  
-  header ul {
-    display:none;
   }
 }
 
